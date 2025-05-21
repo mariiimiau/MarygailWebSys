@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome!</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .welcome-theme {
+            background: linear-gradient(to right, #912f68, #de62aa);
+            min-height: 100vh;
+        }
+        .welcome-card {
+            background: rgb(253, 128, 190);
+            border-radius: 1rem;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        .welcome-title {
+            color: #9e1967;
+            font-weight: 600;
+        }
+        .user-email {
+            background-color: #9e1967;
+            color: #ffffff;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .btn-welcome {
+            background-color: #ea6db6;
+            color: #ffd8ef;
+            font-weight: 500;
+            border: none;
+        }
+        .btn-welcome:hover {
+            background-color: #e1bad1;
+        }
+        .btn-logout {
+            color: #9e1967;
+            font-weight: 500;
+        }
+        .btn-logout:hover {
+            color: #ffffff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body class="welcome-theme">
+    <section class="vh-100 d-flex align-items-center">
+        <div class="container py-5 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                    <div class="card shadow-lg welcome-card" style="border-radius: 1rem;">
+                        <div class="card-body p-5 text-center">
+                            <h2 class="mb-4 welcome-title">𝒲𝑒𝓁𝒸𝑜𝓂𝑒 𝓉𝑜 𝓂𝓎 𝓈𝒾𝓉𝑒₊˚⊹ ᰔ</h2>
+                            
+                            <div class="user-email mb-4" id="userGreeting"></div>
+                            
+                            <div class="d-grid gap-2">
+                                <a href="../index.html" class="btn btn-warning btn-lg btn-welcome">
+                                    ɢᴏ ᴛᴏ ᴍʏ ꜱɪᴛᴇ ♡‧₊˚
+                                </a>
+                            </div>
+                            
+                            <div class="mt-3">
+                                <a href="login.html" class="btn-logout">
+                                    ʟᴏɢ ᴏᴜᴛ
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const email = urlParams.get('email');
+        const name = urlParams.get('name');
+
+        if (email) {
+            const greeting = name ? `Hello, ${name}!` : email;
+            document.getElementById('userGreeting').textContent = greeting;
+        } else {
+            window.location.href = 'login.html';
+        }
+    </script>
+</body>
+</html>

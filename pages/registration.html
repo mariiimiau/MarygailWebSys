@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marygail's Registration</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .gradient-custom { background: linear-gradient(to right, #a52470, #ea6db6); }
+        .error-message { color: #e179f1; font-size: 0.875em; margin-top: 0.25rem; }
+
+         .btn-lg {
+            background-color: #a52470;
+            color:#ea6db6;
+            border: none;
+        }
+
+        .btn-lg:hover {
+            background-color: #e1bad1;
+
+        }
+    </style>
+</head>
+<body class="gradient-custom">
+    <section class="vh-100">
+        <div class="container py-5 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                    <div class="card shadow-lg" style="border-radius: 1rem;">
+                        <div class="card-body p-5 text-center">   
+                            <h3 class="mb-5">𝓡𝓮𝓰𝓲𝓼𝓽𝓮𝓻</h3>
+
+                            <form id="registerForm">
+                                
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="username" placeholder="Username" required>
+                                    <label for="username">Username</label>
+                                </div>
+                                
+                                <div class="form-floating mb-3">
+                                    <input type="email" class="form-control" id="email" placeholder="email@example.com" required>
+                                    <label for="email">Email</label>
+                                </div>
+                                
+                                <div class="form-floating mb-3">
+                                    <input type="password" class="form-control" id="password" placeholder="Password" required>
+                                    <label for="password">Password</label>
+                                </div>
+                                
+                                <div class="form-floating mb-4">
+                                    <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password" required>
+                                    <label for="confirmPassword">Confirm Password</label>
+                                </div>
+                                <div id="errorMessage" class="error-message mb-3"></div>
+                                
+                                <button class="btn btn-warning btn-lg w-100 mb-4" type="submit">ʀᴇɢɪꜱᴛᴇʀ</button>
+                                
+                                <p class="mb-0">ᴀʟʀᴇᴀᴅʏ ʜᴀᴠᴇ ᴀɴ ᴀᴄᴄᴏᴜɴᴛ?
+                                    <a href="login.html" style="color: #e67bb9; font-weight: bold;">ʟᴏɢɪɴ</a>
+                                </p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Updated validation for registration
+        document.getElementById('registerForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            const errorMessage = document.getElementById('errorMessage');
+
+            if (password !== confirmPassword) {
+                errorMessage.textContent = 'Passwords do not match!';
+                return;
+            }
+            alert('Registration successful! Redirecting to login...');
+            window.location.href = 'login.html';
+        });
+    </script>
+</body>
+</html>

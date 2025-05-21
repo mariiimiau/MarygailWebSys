@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+    <title>Marygail's Website</title>
+    <style>
+    * {
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+    }
+
+    body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #b73f85, #e67bb9);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    }
+
+    .navbar {
+    background: #a2266f;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    }
+
+    .navbar .logo {
+    font-size: 1.4em;
+    font-weight: bold; 
+    color: #b73f85;
+    }
+
+    .navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    }
+
+    .navbar a {
+    color: #ee80c0;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+    }
+
+    .navbar a:hover {
+    color: #ffcee5;
+    }
+
+    .hero {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 140px;
+    gap: 20px;
+    flex-wrap: wrap;
+    }
+
+    .hero-img {
+    flex: 1 1 250px;
+    display: flex;
+    justify-content: center;
+    }
+
+    .hero-img img {
+    width: 600px;
+    height: 700px;
+    border-radius: 20px;
+    object-fit: cover;
+    border: 5px solid #a52470;
+    }
+
+    .hero-img img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+    }
+
+    .hero-text {
+    flex: 2 1 400px;
+    text-align: left;
+    max-width: 600px;
+    }
+        
+    .badges {
+    margin-bottom: 20px; 
+    display: flex; 
+    gap: 15px;
+    flex-wrap: wrap;
+    }
+
+    .badge {
+    background-color: #a52470;
+    color: #ffb7e1;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 14px;
+    font-size: 14px;
+    border-radius: 20px;
+    font-weight: 600;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.2s;
+    }
+
+    .badge:hover {
+    transform: scale(1.05);
+    }
+
+    .badge img {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    object-fit: cover;
+    }
+
+    .btn {
+    padding: 10px 30px;
+    background: #a52470;
+    color: #ffb7e1;
+    border-radius: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block; /* Ensures margin works properly */
+    margin-top: 20px; /* Adds space above the button */
+    }   
+
+    .btn:hover {
+    background: #ffb7da;
+    color: #aa3c86;
+    }
+
+    </style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+    <div class="logo">
+        <img src="C:\Users\angel\OneDrive\Desktop\CESAR_WebSys\assets\pusaaa.png" alt="Posa Logo" width="100%" height="50" /> 
+    </div>
+<ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="resume.html">Resume</a></li>
+    <li><a href="pages/login.html" onclick="location.href='pages/login.html'">Login</a></li>
+</ul>
+</div>
+
+<section id="home" class="hero">
+    <div class="hero-img">
+        <img src="C:\Users\angel\OneDrive\Desktop\CESAR_WebSys\assets\me.jpg" alt="My Photo" />
+</div>
+<div class="hero-text">
+    <div class="badges">
+
+<!-- Add your badges can be [your org or games that you played] --> 
+<span class="badge">
+    <img src="C:\Users\angel\OneDrive\Desktop\CESAR_WebSys\assets\aws.jpg" alt="AWS" />
+    αωѕ ℓєαяηιηg ¢ℓυв - ℓєgαя∂α
+    </span>
+</div>
+<h1>нєу тнєяє, ι'м мαяуgαιℓ αηgєℓιqυє ≽^• ˕ • ྀི≼</h1>
+<p>A curious-creative 2nd-year BSIT-MAA student at National University-Manila, 
+    who aspires to innovate in the multimedia arts field. A casual enjoyer of 
+    various media—especially visual media, such as animations, graphic design, 
+    and PowerPoint presentations. Observing everyday art inspires her to 
+    visually innovate her own designs and drawing</p>
+<a href="resume.html" class="btn">ℓєαяη мσяє</a>
+</div>
+</section> 
+</body>
+
+</html>

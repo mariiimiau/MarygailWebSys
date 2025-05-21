@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marygail's Login Site</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> 
+    <style>
+        .gradient-custom {
+            background: linear-gradient(to right, #a52470, #ea6db6);
+        } 
+
+        .btn-lg {
+            background-color: #a52470;
+            color:#ea6db6;
+            border: none;
+        }
+
+        .btn-lg:hover {
+            background-color: #e1bad1;
+            
+        }
+        </style>
+</head>
+<body class="gradient-custom">
+    <section class="vh-100">
+        <div class="container py-5 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                    <div class="card shadow-lg" style="border-radius: 1rem;">
+                        <div class="card-body p-5 text-center">
+                            <h3 class="mb-5">𝓛𝓸𝓰-𝓘𝓷</h3>
+                            <form id="loginForm">
+                                <div class="form-floating mb-3">
+                                    <input type="email" class="form-control" id="email" placeholder="name@example.com" required> 
+                                    <label for="email">Email address</label>
+                                </div>
+                                <div class="form-floating mb-4">
+                                    <input type="password" class="form-control" id="password" placeholder="Password" required> 
+                                    <label for="password">Password</label>
+                                </div>
+                                <button class="btn btn-warning btn-lg w-100 mb-4" type="submit">ʟᴏɢ-ɪɴ</button> 
+                                <p class="mb-0">ᴅᴏɴ'ᴛ ʜᴀᴠᴇ ᴀɴ ᴀᴄᴄᴏᴜɴᴛ?
+                                     <a href="./registration.html" style="color: #e67bb9; font-weight: bold;">ʀᴇɢɪꜱᴛᴇʀ</a>
+                                </p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> 
+<script>
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value; 
+            const encodedEmail = encodeURIComponent(email);
+            window.location.href = `welcome.html?email=${encodedEmail}`;
+    }); 
+    </script>
+</body>
+</html>
